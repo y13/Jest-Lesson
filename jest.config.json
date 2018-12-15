@@ -1,0 +1,41 @@
+{
+    "bail": true,
+    "expand": true,
+    "verbose": true,
+    "name": "Jest-Lesson",
+    "useStderr": true,
+    "forceExit": true,
+    "logHeapUsage": true,
+    "collectCoverage": true,
+    "testRegex": "(./test/.*| (\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    },
+    "coverageReporters": [
+        "json",
+        "lcov",
+        "text"
+    ],
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "node"
+    ],
+    "testPathIgnorePatterns": [
+        "./tests/dev/data.ts",
+        "./test/tags/data.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+        "./dist/",
+        "./node_modules/",
+        "./src/dev/lib/export/"
+    ],
+    "globals": {
+        "ts-jest": {
+            "diagnostics": true
+        }
+    }
+}
